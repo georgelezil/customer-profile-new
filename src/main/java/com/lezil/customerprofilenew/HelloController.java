@@ -10,6 +10,6 @@ public class HelloController {
 
 	@RequestMapping("/api/hello")
 	String home() {
-		return "Hello, the time at the server is now " + new Date() + "\n";
+		return "Current Time " + new Date() ;
 	}
 }
