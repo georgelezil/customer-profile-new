@@ -3,13 +3,19 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './main/components/NavBar'
 import CustomerRouter from './main/components/CustomerRouter'
+import $ from 'jquery'; 
 
 import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends Component {
+
+  constructor () {
+    super()
+    this.state = {
+      message: ""
+    }
+  }
 	
-  state = {};
-  
   componentDidMount() {
     setInterval(this.hello, 250);
 	}
@@ -21,8 +27,9 @@ class App extends Component {
               this.setState({message: message});
           });
   };
-	
+
   render() {
+
     return (
       <div id="content">
           <NavBar value={this.state.message}/>
